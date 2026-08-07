@@ -3,269 +3,251 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Technologia Startup</title>
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-body{
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
-    color:#fff;
-    min-height:100vh;
+body {
+    background: #090d16;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.25) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.2) 0px, transparent 50%);
+    color: #f8fafc;
+    min-height: 100vh;
 }
 
-.container{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
 }
 
 /* Navigation */
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:30px 0;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
 }
 
-.logo{
-    font-size:36px;
-    font-weight:bold;
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-nav ul{
-    display:flex;
-    list-style:none;
+nav ul {
+    display: flex;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 20px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
 }
 
-nav ul li{
-    margin:0 18px;
+nav ul li {
+    margin: 0 14px;
 }
 
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-size:18px;
+nav ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-nav ul li a:hover{
-    color:#38bdf8;
+nav ul li a:hover {
+    color: #f8fafc;
 }
 
-.login{
-    text-decoration:none;
-    color:white;
-    background:#38bdf8;
-    padding:12px 25px;
-    border-radius:8px;
+.login {
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 4px 20px rgba(236, 72, 153, 0.3);
+    transition: 0.3s;
+}
+
+.login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(236, 72, 153, 0.5);
 }
 
 /* Hero */
 
-.hero{
-
-    min-height:80vh;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:60px;
-
+.hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
 }
 
-.left{
-
-    flex:1;
-
+.left {
+    flex: 1;
 }
 
-.left h1{
-
-    font-size:60px;
-
-    line-height:1.2;
-
-    margin-bottom:25px;
-
+.left h1 {
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    font-weight: 800;
 }
 
-.left span{
-
-    color:#38bdf8;
-
+.left span {
+    background: linear-gradient(135deg, #38bdf8, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.left p{
-
-    font-size:22px;
-
-    line-height:1.8;
-
-    margin-bottom:35px;
-
+.left p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    color: #94a3b8;
 }
 
-.buttons{
-
-    display:flex;
-
-    gap:20px;
-
+.buttons {
+    display: flex;
+    gap: 20px;
 }
 
-.btn{
-
-    text-decoration:none;
-
-    padding:15px 30px;
-
-    border-radius:8px;
-
-    font-size:18px;
-
+.btn {
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.primary{
-
-    background:#38bdf8;
-
-    color:white;
-
+.primary {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    color: white;
+    box-shadow: 0 10px 25px -5px rgba(168, 85, 247, 0.4);
 }
 
-.secondary{
-
-    border:2px solid white;
-
-    color:white;
-
+.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -5px rgba(168, 85, 247, 0.6);
 }
 
-/* Right */
-
-.right{
-
-    flex:1;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:25px;
-
+.secondary {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    backdrop-filter: blur(10px);
 }
 
-.card{
-
-    background:white;
-
-    color:black;
-
-    border-radius:15px;
-
-    padding:35px;
-
-    text-align:center;
-
-    transition:.3s;
-
+.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
 }
 
-.card:hover{
+/* Right Cards */
 
-    transform:translateY(-8px);
-
+.right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.card .icon{
-
-    font-size:45px;
-
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: 0.4s ease;
 }
 
-.card h3{
-
-    margin:15px 0;
-
-    font-size:28px;
-
+.card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(168, 85, 247, 0.2);
 }
 
-.card p{
+.card .icon {
+    font-size: 42px;
+    background: rgba(255, 255, 255, 0.05);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 16px;
+    margin: 0 auto 20px auto;
+}
 
-    font-size:18px;
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-weight: 700;
+}
 
+.card p {
+    font-size: 15px;
+    color: #94a3b8;
 }
 
 /* Responsive */
 
-@media(max-width:900px){
+@media(max-width: 900px) {
 
-.hero{
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 0;
+    }
 
-flex-direction:column;
+    .left h1 {
+        font-size: 40px;
+    }
 
-text-align:center;
+    .left p {
+        font-size: 17px;
+    }
 
-padding:50px 0;
+    .buttons {
+        justify-content: center;
+    }
 
-}
+    .right {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
 
-.left h1{
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-font-size:42px;
-
-}
-
-.left p{
-
-font-size:18px;
-
-}
-
-.buttons{
-
-justify-content:center;
-
-}
-
-.right{
-
-width:100%;
-
-grid-template-columns:1fr;
-
-}
-
-nav{
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-nav ul{
-
-margin:20px 0;
-
-}
-
+    nav ul {
+        margin: 10px 0;
+    }
 }
 
 </style>
-
 </head>
 
 <body>
@@ -273,103 +255,60 @@ margin:20px 0;
 <div class="container">
 
 <nav>
-
-<div class="logo">Technologia</div>
-
-<ul>
-
-<li><a href="#">Home</a></li>
-
-<li><a href="#">Service</a></li>
-
-<li><a href="#">About</a></li>
-
-<li><a href="#">Contact</a></li>
-
-</ul>
-
-<a href="#" class="login">Login</a>
-
+    <div class="logo">Technologia</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="#" class="login">Login</a>
 </nav>
 
 <div class="hero">
+    <div class="left">
+        <h1>
+            Build Smarter with <br>
+            <span>AI Solutions</span>
+        </h1>
+        <p>
+            Technologia startup helps startups and businesses automate workflows,
+            improve productivity and accelerate growth using modern AI and cloud technologies.
+        </p>
+        <div class="buttons">
+            <a href="#" class="btn primary">Get Started</a>
+            <a href="#" class="btn secondary">Learn More</a>
+        </div>
+    </div>
 
-<div class="left">
+    <div class="right">
+        <div class="card">
+            <div class="icon">🤖</div>
+            <h3>AI</h3>
+            <p>Smart Automation</p>
+        </div>
 
-<h1>
+        <div class="card">
+            <div class="icon">☁️</div>
+            <h3>Cloud</h3>
+            <p>Fast & Secure</p>
+        </div>
 
-Build Smarter with
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>Analytics</h3>
+            <p>Real-time Insights</p>
+        </div>
 
-<span>AI Solutions</span>
-
-</h1>
-
-<p>
-
-Technologia startup helps startups and businesses automate workflows,
-
-improve productivity and accelerate growth using modern AI and cloud technologies.
-
-</p>
-
-<div class="buttons">
-
-<a href="#" class="btn primary">Get Started</a>
-
-<a href="#" class="btn secondary">Learn More</a>
-
-</div>
-
-</div>
-
-<div class="right">
-
-<div class="card">
-
-<div class="icon">🤖</div>
-
-<h3>AI</h3>
-
-<p>Smart Automation</p>
-
-</div>
-
-<div class="card">
-
-<div class="icon">☁️</div>
-
-<h3>Cloud</h3>
-
-<p>Fast & Secure</p>
-
-</div>
-
-<div class="card">
-
-<div class="icon">📊</div>
-
-<h3>Analytics</h3>
-
-<p>Real-time Insights</p>
-
-</div>
-
-<div class="card">
-
-<div class="icon">🛡️</div>
-
-<h3>Security</h3>
-
-<p>Protected Data</p>
-
-</div>
-
-</div>
-
+        <div class="card">
+            <div class="icon">🛡️</div>
+            <h3>Security</h3>
+            <p>Protected Data</p>
+        </div>
+    </div>
 </div>
 
 </div>
 
 </body>
-
 </html>
